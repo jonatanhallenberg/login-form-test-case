@@ -6,10 +6,10 @@
 
 <body>
     <form id="loginForm">
-        <div id="loginMessage"></div>
-        <input type="text" placeholder="Användarnamn" id="username" />
-        <input type="password" placeholder="Lösenord" id="password" />
-        <button type="submit">Logga in</button>
+        <div id="loginMessage" data-test-id="result-message"></div>
+        <input type="text" placeholder="Användarnamn" id="username" data-test-id="login-form-username" />
+        <input type="password" placeholder="Lösenord" id="password" data-test-id="login-form-password" />
+        <button type="submit" data-test-id="login-button">Logga in</button>
     </form>
 </body>
 
