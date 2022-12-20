@@ -28,7 +28,9 @@
         if (!usernameField.value || !passwordField.value) {
             loginMessageDiv.innerHTML = "Du måste fylla in användarnamn och lösenord!";
         } else if (usernameField.value === "jonatan" && passwordField.value === "hejsan123") {
-            loginMessageDiv.innerHTML = "Du är inloggad!";
+            fetch("https://catfact.ninja/fact").then(res => res.json()).then(data => {
+                loginMessageDiv.innerHTML = data.fact;
+            })
         } else {
             loginMessageDiv.innerHTML = "Du har angett fel användarnamn eller lösenord!";
         }
